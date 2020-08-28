@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+class Student{
+    studentPassword;
+    studenName;
+    studenSurname;
+    studenMail;
+    studentPhoneNumber;
+
+    constructor(kod,ad,soyad,mail,tel){
+        this.studentPassword=kod,
+        this.studenName=ad,
+        this.studenSurname=soyad,
+        this.studenMail=mail,
+        this.studentPhoneNumber=tel
+    }
+}
+
+let telebeler=[
+    new Student(123,"Orxan","Mustafayev","dokta@mail.ru",8188121),
+    new Student(673,"Vaqif","Eliyev","dokta@mail.ru",8188121),
+    new Student(755,"Ekber","Hesenli","dokta@mail.ru",8188121),
+    new Student(412,"Cabbar","Haciyev","dokta@mail.ru",8188121),
+    new Student(863,"Tural","Soltanov","dokta@mail.ru",8188121),
+    new Student(801,"Rauf","Alixanov","dokta@mail.ru",8188121),
+    new Student(127,"Kamil","Mahmudov","dokta@mail.ru",8188121),
+    new Student(453,"Ayxan","Umarov","dokta@mail.ru",8188121),
+    new Student(969,"Huseyn","Hesenov","dokta@mail.ru",8188121),
+    new Student(331,"Zaur","Veliyev","dokta@mail.ru",8188121),
+]
+    
+
+function adaGoreMelumatiVer(ad){
+    for (var i=0;i<telebeler.length;i++){
+        if(ad==telebeler[i].studenName){
+            console.log(telebeler[i].studentPassword,telebeler[i].studenName,telebeler[i].studenSurname,telebeler[i].studenMail,telebeler[i].studentPhoneNumber);
+        }
+    }
+}
+
+
+function kodaGoreMelumatlariVer(kod){
+    for(var i=0;i<telebeler.length;i++){
+        if(kod==telebeler[i].studentPassword){
+            console.log(telebeler[i].studentPassword,telebeler[i].studenName,telebeler[i].studenSurname,telebeler[i].studenMail,telebeler[i].studentPhoneNumber);
+        }
+    }
+}
+
+function butunTelebelerinMelumatlariniVer(){
+    console.log(telebeler);
+}
+
+
+adaGoreMelumatiVer("Ekber");
+
+kodaGoreMelumatlariVer(123);
+
+butunTelebelerinMelumatlariniVer();
+
+</script>
+</body>
